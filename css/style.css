@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    --primary-font: 'Young Serif', serif;
+    --secondary-font: 'Outfit', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--white);
+    color: var(--wenge-brown);
+}
+h1,
+h2 {
+    font-family: var(--primary-font);
+}
+p {
+    color: var(--wenge-brown);
+}
+span {
+    color: var(--wenge-brown);
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+h1 {
+    line-height: 1.1;
+    color: var(--dark-charcoal);
+}
+h2 {
+    color: var(--nutmeg);
+}
+h3 {
+    color: var(--dark-raspberry);
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+/*Utilities*/
+.h3-heading {
+    margin: 0;
+}
+.section {
+    border-bottom: 1px solid var(--light-grey);
+}
+/*Recipe*/
+
+.recipe__grid {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.recipe__description {
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.recipe__preparation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--rose-white);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.recipe__preparation ul li::marker {
+    color: var(--dark-raspberry);
+}
+.recipe__preparation ul {
+    padding-left: 2rem;
+}
+
+.recipe__ingredients ul li::marker {
+    color: var(--nutmeg);
+    font-weight: 600;
+}
+.recipe__instructions ol li::marker {
+    color: var(--nutmeg);
+    font-weight: 600;
+}
+
+.nutrition__info {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.nutrition__category {
+    font-weight: 400;
+}
+.nutrition__value {
+    color: var(--nutmeg);
+    font-weight: 600;
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-color: var(--eggshell);
+    }
+    .recipe {
+        background-color: var(--white);
+        margin: 15rem auto;
+        border-radius: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .recipe__image {
+        width: 90%;
+        margin: 4rem auto;
+    }
+    .nutrition__info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nutrition__value {
+        grid-column: 3/4;
+    }
+}
